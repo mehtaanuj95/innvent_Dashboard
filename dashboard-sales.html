@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -155,7 +155,7 @@
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
-<!--                                         
+<!--
                                         <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
@@ -448,7 +448,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        
+
                                     </ol>
                                 </nav>
                             </div>
@@ -458,7 +458,7 @@
                 <!-- ============================================================== -->
                 <!-- pagehader  -->
                 <!-- ============================================================== -->
-                
+
                 <!-- ============================================================== -->
                 <!-- revenue  -->
                 <!-- ============================================================== -->
@@ -473,7 +473,7 @@
                                 <div class="row">
                                     <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 p-3">
                                         <h4> Total Calls: 368</h4>
-                                        
+
                                         </p>
                                     </div>
                                     <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 p-3">
@@ -536,7 +536,10 @@
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Recent Requests</h5>
+                            <h5 class="card-header"> Recent Requests &nbsp
+                              <button type="button" class="btn btn-success" onclick="populateData();">Populate Data</button>
+                            </h5>
+
                             <div class="card-body p-0">
                                 <div class="table-responsive">
                                     <table class="table">
@@ -552,7 +555,7 @@
                                                 <th class="border-0">Ground Condition</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="recent_requests_id">
                                             <tr>
                                                 <td>1</td>
                                                 <td><a href="pages/ward_details.html">WhiteField  </a></td>
@@ -668,7 +671,7 @@
                     <!-- end revenue locations  -->
                     <!-- ============================================================== -->
                 </div>
-                
+
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
@@ -710,7 +713,7 @@
     <!-- chartjs js-->
     <script src="assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
     <script src="assets/vendor/charts/charts-bundle/chartjs.js"></script>
-   
+
     <!-- main js-->
     <script src="assets/libs/js/main-js.js"></script>
     <!-- jvactormap js-->
@@ -722,5 +725,5 @@
      <!-- dashboard sales js-->
     <script src="assets/libs/js/dashboard-sales.js"></script>
 </body>
- 
+
 </html>

@@ -1,9 +1,9 @@
 
 $(function() {
     "use strict";
-    // ============================================================== 
+    // ==============================================================
     // Revenue
-    // ============================================================== 
+    // ==============================================================
  var ctx = document.getElementById('revenue').getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -16,7 +16,7 @@ $(function() {
                       backgroundColor: "rgba(89, 105, 255,0.5)",
                                     borderColor: "rgba(89, 105, 255,0.7)",
                                     borderWidth: 2
-                        
+
                     }, {
                         label: 'Previous Week',
                         data: [2, 29, 5, 5, 2, 3, 10],
@@ -26,7 +26,7 @@ $(function() {
                     }]
                 },
                 options: {
-                        
+
                              legend: {
                         display: true,
                         position: 'bottom',
@@ -65,17 +65,17 @@ $(function() {
                                         }
                                     }]
                                 }
-        
+
                 }
             });
-   
-    // ============================================================== 
+
+    // ==============================================================
     // Total Sale
-    // ============================================================== 
+    // ==============================================================
  var ctx = document.getElementById("total-sale").getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'doughnut',
-                
+
                 data: {
                     labels: ["New", " In process", "Others", "Completed"],
                     datasets: [{
@@ -96,13 +96,13 @@ $(function() {
                 }
 
             });
-     
-   
-    // ============================================================== 
+
+
+    // ==============================================================
     // Location Map
-    // ============================================================== 
+    // ==============================================================
      jQuery('#locationmap').vectorMap({
-        
+
                 map: 'world_mill_en',
                 backgroundColor: 'transparent',
                 borderColor: '#000',
@@ -160,9 +160,9 @@ $(function() {
             });
 
 
- // ============================================================== 
+ // ==============================================================
     // Revenue Cards
-    // ============================================================== 
+    // ==============================================================
     $("#sparkline-1").sparkline([5, 5, 7, 7, 9, 5, 3, 5, 2, 4, 6, 7], {
         type: 'line',
         width: '99.5%',
@@ -228,10 +228,50 @@ $(function() {
         highlightLineColor: undefined,
         resize:true,
     });
- 
-    
-   
-    
-
 
 });
+
+
+function populateData() {
+  //dynamically create a row of table.
+
+  // <tr>
+  //     <td>1</td>
+  //     <td><a href="pages/ward_details.html">WhiteField  </a></td>
+  //     <td>W-1023 </td>
+  //     <td>3</td>
+  //     <td>Abhijith Dasarathi </td>
+  //     <td>9293454556</td>
+  //     <td>2</td>
+  //     <td><span class="badge-dot badge-success mr-1"></span>Under Control </td>
+  // </tr>
+    alert("comes here");
+    var tr = document.createElement("tr");
+    var td = [];
+    for(var i = 0; i < 8; i++) {
+      td[i] = document.createElement('td');
+      //tr.appendChild(td[i]);
+    }
+    td[0].innerHTML = "5";
+    td[1].innerHTML = "WhiteField";
+    td[2].innerHTML = "W-1027";
+    td[3].innerHTML = "3";
+    td[4].innerHTML = "Shah Rukh Khan";
+    td[5].innerHTML = "9293454556";
+    td[6].innerHTML = "5";
+
+    var status_element = document.createElement('span');
+    status_element.setAttribute("class", "badge-dot badge-success mr-1");
+    status_element.innerHTML = "Under Control";
+
+    td[7].appendChild(status_element);
+
+    for(var i = 0; i < 8; i++) {
+      tr.appendChild(td[i]);
+      //tr.appendChild(td[i]);
+    }
+
+    var tbody_id = document.getElementById('recent_requests_id');
+    tbody_id.appendChild(tr);
+    alert("ends here");
+}
